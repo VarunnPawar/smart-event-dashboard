@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Event Dashboard</title>
+    <link rel="stylesheet" href="index.css"></style>
+</head>
+<body>
+
+    <h1>🎯 Smart Event Dashboard</h1>
+
+    <div class="container">
+        <div class="input-card">
+            <h2>Add new event</h2>
+            <label>Event Name:</label>
+            <input type="text" id="evName" placeholder="Event name">
+            
+            <label>Event Date:</label>
+            <input type="date" id="evDate">
+            
+            <label>Event Category:</label>
+            <select id="evCat">
+                <option>Conference</option>
+                <option>Workshop</option>
+                <option>Webinar</option>
+            </select>
+            
+            <label>Description:</label>
+            <textarea id="evDesc" rows="3" placeholder="Event description"></textarea>
+            
+            <button class="add-btn" onclick="addEvent()">Add Event</button>
+        </div>
+
+        <div class="display-container">
+            <h2>My Events</h2>
+            <div id="eventGrid">
+                <div class="event-card">
+                    <button class="close-btn" onclick="this.parentElement.remove()">×</button>
+                    <h3>Parkisha Per Charcha</h3>
+                    <span class="date">📅 2026-02-26</span>
+                    <div class="category-tag">conference</div>
+                    <p>This a conference of PM Modi with students</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src ="index.js"></script>
+</body>
+</html>
